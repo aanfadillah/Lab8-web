@@ -2,9 +2,9 @@
 
 <h1 align="center"><b>Praktikum 8</b></h1> 
 
-**Nama: Rini Ariza**
+**Nama: Aan Fadillah Putra**
 
-**NIM: 312210337**
+**NIM: 312210327**
 
 **Kelas: TI.22.A3**
 
@@ -23,7 +23,8 @@
 ## Menjalankan MySQL Server
 ### Untuk menjalankan MySQL Server dari menu XAMPP Contol.
 
-![Screenshot (502)](https://github.com/rniarzz/Lab8web/assets/115542704/96f742d7-8b8e-4a59-a28a-7382ea1329f5)
+![Aan 1 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/bb2d7c7f-b571-41db-9583-9ddb421f5aac)
+
 
 ## Mengakses MySQL Client menggunakan PHP MyAdmin
 
@@ -31,7 +32,8 @@
 
 ## Membuat Database: Studi Kasus Data Barang
 
-![image](https://github.com/rniarzz/Lab8web/assets/115542704/d6e74f09-2069-4870-94cf-88a5856e70ea)
+![aan2](https://github.com/aanfadillah/Lab8-web/assets/115763475/fa96882a-077b-4923-8661-e6c2057c3f30)
+
 
 ## Membuat Database
 
@@ -53,7 +55,8 @@ CREATE TABLE data_barang (
 );
 ```
 
-![Screenshot (505)](https://github.com/rniarzz/Lab8web/assets/115542704/bb0a5dc3-74af-4ac3-825b-37ab10810446)
+![aan3 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/6013c468-da6a-4b44-8b69-5e0352b72b88)
+
 
 ## Menambahkan Data
 
@@ -64,16 +67,19 @@ VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 
 ('Elektronik', 'HP OPPO Android', 'hp_oppo.jpg', 1800000, 2300000, 5);
 ```
 
-![lab4](https://github.com/rniarzz/Lab8web/assets/115542704/4eac4ae1-8b0f-4a1c-b4f3-6efd55b0e451)
+![aan4 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/f2e2c3d9-4884-440f-a52b-232f7705a6b8)
+
 
 ## Membuat Program CRUD
 ### Buat folder lab8_php_database pada root directory web server (c:\xampp\htdocs)
 
-![Screenshot (504)](https://github.com/rniarzz/Lab8web/assets/115542704/481928db-131a-41ef-8b12-d6aef12dc421)
+![aan5 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/2d5ad9d6-f9d6-4bf3-9608-5a7ccffb0607)
+
 
 ## Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL: http://localhost/lab8_php_database/
 
-![Screenshot (467)](https://github.com/rniarzz/Lab8web/assets/115542704/94fb42cc-f5db-4d58-b54c-68e555880cda)
+![aan6 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/71a3dcd6-efff-4369-847b-f368b50f9e4b)
+
 
 ## Membuat file koneksi database
 ### Buat file baru dengan nama ```koneksi.php```
@@ -94,7 +100,8 @@ if ($conn == false)
 ```
 ### Buka melalui browser untuk menguji koneksi database untuk menyampilkan pesan koneksi berhasil, uncomment pada perintah ```echo “koneksi berhasil”;```
 
-![Screenshot (495)](https://github.com/rniarzz/Lab8web/assets/115542704/c9772bfe-40ab-4152-a665-9a839c257bfd)
+![aan7 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/ba6783aa-ec28-4110-ae50-0e4e1839f555)
+
 
 ## Membuat file index untuk menampilkan data (Read)
 ### Buat file baru dengan nama ```index.php```
@@ -216,7 +223,8 @@ $result = mysqli_query($conn, $sql);
 </body>
 </html>
 ```
-![Screenshot (498)](https://github.com/rniarzz/Lab8web/assets/115542704/7110d3fa-f7e8-4506-ba71-5f10d5eff6c9)
+![aan8 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/dae699c9-9f51-40b7-8e05-d191f978c51f)
+
 
 />
 			</div>
@@ -226,7 +234,8 @@ $result = mysqli_query($conn, $sql);
 </body>
 </html>
 ```
-![Screenshot (499)](https://github.com/rniarzz/Lab8web/assets/115542704/ef1bd147-af11-4fad-942f-5d728d801ffa)
+![aan9 png](https://github.com/aanfadillah/Lab8-web/assets/115763475/5b0aac81-a621-4794-a3f4-508fb5e5257e)
+
 
 ## Menghapus Data (Delete)
 ### Buat file baru dengan nama ```hapus.php```
