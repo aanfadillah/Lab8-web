@@ -217,3 +217,26 @@ $result = mysqli_query($conn, $sql);
 </html>
 ```
 ![Screenshot (498)](https://github.com/rniarzz/Lab8web/assets/115542704/7110d3fa-f7e8-4506-ba71-5f10d5eff6c9)
+
+/>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
+```
+![Screenshot (499)](https://github.com/rniarzz/Lab8web/assets/115542704/ef1bd147-af11-4fad-942f-5d728d801ffa)
+
+## Menghapus Data (Delete)
+### Buat file baru dengan nama ```hapus.php```
+
+```php
+<?php
+include_once 'koneksi.php';
+$id = $_GET['id'];
+$sql = "DELETE FROM data_barang WHERE id_barang = '{$id}'";
+$result = mysqli_query($conn, $sql);
+header('location: index.php');
+?>
+```
