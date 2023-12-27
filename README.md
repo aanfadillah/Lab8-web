@@ -74,3 +74,84 @@ VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 
 ## Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL: http://localhost/lab8_php_database/
 
 ![Screenshot (467)](https://github.com/rniarzz/Lab8web/assets/115542704/94fb42cc-f5db-4d58-b54c-68e555880cda)
+
+## Membuat file koneksi database
+### Buat file baru dengan nama ```koneksi.php```
+
+```php
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "latihan1";
+$conn = mysqli_connect($host, $user, $pass, $db);
+if ($conn == false)
+{
+  echo "Koneksi ke server gagal.";
+  die();
+} #else echo "Koneksi berhasil";
+?>
+```
+### Buka melalui browser untuk menguji koneksi database untuk menyampilkan pesan koneksi berhasil, uncomment pada perintah ```echo “koneksi berhasil”;```
+
+![Screenshot (495)](https://github.com/rniarzz/Lab8web/assets/115542704/c9772bfe-40ab-4152-a665-9a839c257bfd)
+
+## Membuat file index untuk menampilkan data (Read)
+### Buat file baru dengan nama ```index.php```
+
+```php
+<?php
+include("koneksi.php");
+$sql = 'SELECT * FROM data_barang';
+$result = mysqli_query($conn, $sql);
+?>
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Data Barang</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Barang</h1>
+        <tr>
+            <a href="tambah.php?id=">Tambah Barang</a>
+        </tr>
+
+        <div class="main">
+            <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Gambar</th>
+                <th>Nama Barang</th>
+                <th>Katagori</th>
+                <th>Harga Jual</th>
+                <th>Harga Beli</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+            <?php if($result): ?>
+            <?php while($row = mysqli_fetch_array($result)): ?>
+            <tr>
+                <td><?= $row['nama'];?></td>
+                <td><?= $row['nama'];?></td>
+                <td><?= $row['kategori'];?></td>
+                <td><?= $row['harga_beli'];?></td>
+                <td><?= $row['harga_jual'];?></td>
+                <td><?= $row['stok'];?></td>
+                <td>
+                    <a href="ubah.php?id=<?= $row['id_barang'];?>">Ubah</a>
+                    <a href="hapus.php?id=<?= $row['id_barang'];?>">Hapus</a>
+                </td>
+            </tr>
+            <?php endwhile; else: ?>
+            <tr>
+                <td colspan="7">Belum ada data</td>
+            </tr>
+            <?php endif; ?>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+```
